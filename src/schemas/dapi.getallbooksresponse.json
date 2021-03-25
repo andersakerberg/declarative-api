@@ -1,0 +1,58 @@
+{
+  "description": "GetAllBooksResponse",
+  "type": "object",
+  "properties": {
+    "books": {
+      "type": "array",
+      "items": {
+        "description": "Book",
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "title": "title"
+          },
+          "author": {
+            "type": "string",
+            "title": "author"
+          },
+          "year": {
+            "type": "number",
+            "title": "year"
+          },
+          "publisher": {
+            "type": "string",
+            "title": "publisher"
+          },
+          "onSale": {
+            "type": "boolean",
+            "title": "onSale"
+          },
+          "category": {
+            "enum": [
+              "Comedy",
+              "Horror",
+              "Romance",
+              "Thriller"
+            ],
+            "type": "string",
+            "title": "category"
+          }
+        },
+        "required": [
+          "author",
+          "category",
+          "onSale",
+          "publisher",
+          "title",
+          "year"
+        ]
+      },
+      "title": "books"
+    }
+  },
+  "required": [
+    "books"
+  ],
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

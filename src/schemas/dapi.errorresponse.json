@@ -1,0 +1,33 @@
+{
+  "description": "Error response schema",
+  "type": "object",
+  "properties": {
+    "errorMessage": {
+      "type": "string",
+      "title": "errorMessage"
+    },
+    "errorCode": {
+      "enum": [
+        "BAD_REQUEST",
+        "CONFLICTING_RESOURCE",
+        "EMAIL_IS_MALFORMED",
+        "FORBIDDEN",
+        "INCORRECT_AUTH_HEADERS",
+        "INTERNAL_SERVER_ERROR",
+        "INVALID_FORMAT",
+        "INVALID_JWT",
+        "MISSING_CLIENT_NAME",
+        "ROUTE_NOT_FOUND",
+        "UNAUTHORIZED",
+        "UNAUTHORIZED_SERVICE"
+      ],
+      "type": "string",
+      "title": "errorCode"
+    }
+  },
+  "required": [
+    "errorCode",
+    "errorMessage"
+  ],
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

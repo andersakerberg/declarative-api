@@ -1,0 +1,41 @@
+{
+  "description": "Wine",
+  "type": "object",
+  "properties": {
+    "id": {
+      "description": "Currently the filename",
+      "type": "string",
+      "title": "id"
+    },
+    "title": {
+      "type": "string",
+      "title": "title"
+    },
+    "description": {
+      "type": "string",
+      "title": "description"
+    },
+    "year": {
+      "type": "number",
+      "title": "year"
+    },
+    "category": {
+      "enum": [
+        "Châteauneuf-du-Pape (red)",
+        "Merlot (medium bodied red)",
+        "Riesling (white)",
+        "Sangiovese (rosé)"
+      ],
+      "type": "string",
+      "title": "category"
+    }
+  },
+  "required": [
+    "category",
+    "description",
+    "id",
+    "title",
+    "year"
+  ],
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

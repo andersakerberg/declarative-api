@@ -1,0 +1,54 @@
+{
+  "description": "GetAllBeersResponse",
+  "type": "object",
+  "properties": {
+    "beers": {
+      "type": "array",
+      "items": {
+        "description": "Beer",
+        "type": "object",
+        "properties": {
+          "id": {
+            "description": "Currently the filename",
+            "type": "string",
+            "title": "id"
+          },
+          "title": {
+            "type": "string",
+            "title": "title"
+          },
+          "brewery": {
+            "type": "string",
+            "title": "brewery"
+          },
+          "year": {
+            "type": "number",
+            "title": "year"
+          },
+          "category": {
+            "enum": [
+              "Double India Pale Ale",
+              "India Pale Ale",
+              "Porter",
+              "Stout"
+            ],
+            "type": "string",
+            "title": "category"
+          }
+        },
+        "required": [
+          "brewery",
+          "category",
+          "id",
+          "title",
+          "year"
+        ]
+      },
+      "title": "beers"
+    }
+  },
+  "required": [
+    "beers"
+  ],
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

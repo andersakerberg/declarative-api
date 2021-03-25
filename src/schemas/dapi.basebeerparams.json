@@ -1,0 +1,19 @@
+{
+  "description": "baseBeerParams",
+  "type": "object",
+  "properties": {
+    "beer": {
+      "type": "string",
+      "title": "beer"
+    },
+    "year": {
+      "type": "string",
+      "title": "year"
+    }
+  },
+  "required": [
+    "beer",
+    "year"
+  ],
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

@@ -1,0 +1,48 @@
+{
+  "name": "declarative-api",
+  "version": "0.0.0",
+  "description": "",
+  "main": "dist/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/server.js",
+    "generate:schemas": "npx ts-node src/generateSchemas.ts",
+    "generate:entities": "cross-env NODE_PATH=src TS_NODE_FILES=true npx ts-node src/generateEntities.ts",
+    "dev": "cross-env NODE_PATH=src TS_NODE_FILES=true nodemon src/server.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andersakerberg/declarative-api.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andersakerberg/declarative-api/issues"
+  },
+  "homepage": "https://github.com/andersakerberg/declarative-api#readme",
+  "dependencies": {
+    "@types/faker": "^5.1.7",
+    "app-module-path": "^2.2.0",
+    "cross-env": "^7.0.3",
+    "dotenv": "^8.2.0",
+    "faker": "^5.4.0",
+    "fastify": "^3.14.0",
+    "fastify-caching": "^6.1.0",
+    "fastify-cors": "^5.2.0",
+    "fastify-helmet": "^5.3.1",
+    "fastify-oas": "^3.0.8",
+    "nodemon": "^2.0.7",
+    "pino-pretty": "^4.7.1",
+    "typescript-json-schema": "^0.50.0",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.35",
+    "@typescript-eslint/eslint-plugin": "^4.18.0",
+    "@typescript-eslint/parser": "^4.19.0",
+    "eslint": "^7.22.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "typescript": "^4.2.3"
+  }
+}
